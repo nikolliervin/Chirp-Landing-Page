@@ -1,0 +1,9 @@
+1.dont forget
+to set the hero background
+cuz you removed it from the body.
+
+2.if problems with features__container
+wrap it under "container" 
+cuz you dickhead removed it
+
+

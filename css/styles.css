@@ -10,7 +10,7 @@ html {
   --color-btn: #1da1f2;
 }
 body {
-  background-color: var(--color-hero-primary);
+  margin: 0;
 }
 
 ul {
@@ -188,5 +188,44 @@ li a {
   }
   .hero__content p {
     font-size: 2rem;
+  }
+}
+
+.features__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+.features__icon img {
+  width: 24px;
+  opacity: 0.8;
+}
+.feature_card {
+  border: 1px solid rgb(214, 214, 214);
+  margin: 1rem 0 1rem;
+  padding: 2.5rem;
+  border-radius: 5px;
+}
+.feature_card p {
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+.features__heading {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .features__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5rem;
+  }
+  .feature_card {
+    width: 60rem;
+  }
+  .features__heading {
+    font-size: 3.5rem;
   }
 }
