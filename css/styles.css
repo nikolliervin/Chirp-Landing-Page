@@ -116,7 +116,7 @@ li a {
   justify-self: center;
 }
 
-.hero__buttons {
+.learn__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +145,48 @@ li a {
   transform: scale(1.5);
 }
 
-/*#first{
-  order: 1;
+@media screen and (min-width: 480px) {
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .hero__image img {
+    width: 100%;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .learn__button {
+    padding-left: 1rem;
+  }
 }
-*/ ;
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    gap: 5rem;
+  }
+  #first {
+    order: 1;
+  }
+  .hero__image img {
+    width: 50rem;
+  }
+  .hero h1 {
+    font-size: 7.5rem;
+  }
+  .hero__content p {
+    font-size: 2rem;
+  }
+}
