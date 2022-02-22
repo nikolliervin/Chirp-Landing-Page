@@ -1,0 +1,151 @@
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --color-hero-primary: #fbf8f3;
+  --color-hero-secondary: #d7f5f5;
+  --color-text: #767676;
+  --color-btn: #1da1f2;
+}
+body {
+  background-color: var(--color-hero-primary);
+}
+
+ul {
+  list-style: none;
+  color: var(--color-text);
+  padding-left: 0;
+}
+
+li a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin: 1rem;
+}
+.container {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+/*buttons and nav bar*/
+
+.button a {
+  text-decoration: none;
+  color: white;
+}
+.button-container {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.button {
+  background: var(--color-btn);
+  color: white;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.button-icon {
+  margin-right: 1rem;
+  position: relative;
+  top: 3px;
+}
+.nav__button {
+  display: none;
+}
+.logo {
+  font-style: italic;
+  color: var(--color-btn);
+}
+
+@media screen and (min-width: 480px) {
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+  }
+  .container {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+  }
+  .button {
+    display: inline;
+  }
+}
+
+/*Hero*/
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.hero__image img {
+  width: 300px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+.hero__content p {
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+.learn__button {
+  color: #1f7898;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.decorated {
+  color: #1f7898;
+  font-weight: 700;
+}
+.learn__button::after {
+  content: "→";
+  justify-self: center;
+}
+
+.hero__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__users p {
+  font-size: 1.5rem;
+  font-variant: var(--color-text);
+}
+.avatar__container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+.avatar__container {
+  margin-bottom: 3rem;
+}
+
+.avatar__container img {
+  margin-right: -2rem;
+  transition: transform 0.5s;
+}
+.avatar__container img:hover {
+  z-index: 9999;
+  transform: scale(1.5);
+}
+
+/*#first{
+  order: 1;
+}
+*/ ;
