@@ -229,3 +229,84 @@ li a {
     font-size: 3.5rem;
   }
 }
+
+/*Reviews*/
+
+.costomer__reviews {
+  background-color: #d7f5f5;
+}
+.card {
+  margin: 2rem 1rem 2rem 1rem;
+
+  background: white;
+  border-radius: 5px;
+  padding: 1.3rem;
+}
+.card__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.user__info {
+  display: flex;
+}
+.user__credintials {
+  padding-top: 1rem;
+  padding-left: 0.4rem;
+}
+.user__credintials p {
+  margin: 0;
+  color: var(--color-text);
+  padding-top: 0.3rem;
+}
+.user__credintials h3 {
+  margin: 0;
+  padding-top: 1rem;
+}
+.card__content p {
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+.card__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.likes {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.likes img {
+  width: 15px;
+}
+.review__heading {
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .customer__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .user__credintials {
+    padding-top: 0;
+  }
+  .likes img,
+  .twitter__icon,
+  .userinfo img {
+    transition: transform 1s;
+  }
+  .likes img:hover {
+    transform: rotate(360deg);
+  }
+  .twitter__icon:hover {
+    transform: rotate(360deg);
+  }
+  .user__info img:hover {
+    transform: scale(1.2);
+  }
+}
