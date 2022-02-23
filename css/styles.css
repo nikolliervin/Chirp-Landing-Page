@@ -1,6 +1,7 @@
 html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
+  overflow-x: 0;
 }
 
 :root {
@@ -26,20 +27,22 @@ li a {
   margin: 1rem;
 }
 .container {
-  margin-top: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
 /*buttons and nav bar*/
-
+header {
+  background: #fbf8f3;
+}
 .button a {
   text-decoration: none;
   color: white;
 }
 .button-container {
   margin-left: 3rem;
-  margin-right: 3rem;
+  margin-right: 0;
+  margin-bottom: 2rem;
 }
 .button {
   background: var(--color-btn);
@@ -52,6 +55,9 @@ li a {
   justify-content: center;
   font-size: 1.5rem;
 }
+.button:hover {
+  background-color: #34b0ff;
+}
 .button-icon {
   margin-right: 1rem;
   position: relative;
@@ -60,9 +66,17 @@ li a {
 .nav__button {
   display: none;
 }
-.logo {
+.logo a {
   font-style: italic;
   color: var(--color-btn);
+  text-decoration: none;
+}
+.logo {
+  transition: all 1s;
+}
+.logo:hover {
+  transform: scale(1.2);
+  transform: rotate(350deg);
 }
 
 @media screen and (min-width: 480px) {
@@ -73,7 +87,6 @@ li a {
   .container {
     margin-left: 10rem;
     margin-right: 10rem;
-    margin-top: 2rem;
   }
   .button {
     display: inline;
@@ -86,10 +99,23 @@ li a {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  padding-bottom: 5rem;
+  padding-top: 3rem;
+}
+.hero__container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: var(--color-hero-primary);
 }
 
 .hero__image img {
   width: 300px;
+  transition: all 0.5s;
+}
+.hero__image img:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transform: scale(1.05);
 }
 .hero h1 {
   font-size: 2.5rem;
@@ -107,6 +133,7 @@ li a {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+
 .decorated {
   color: #1f7898;
   font-weight: 700;
@@ -144,6 +171,12 @@ li a {
   z-index: 9999;
   transform: scale(1.5);
 }
+.avatar__container img:first-of-type {
+  margin-top: 0;
+}
+.button-container {
+  display: inline;
+}
 
 @media screen and (min-width: 480px) {
   .hero {
@@ -165,7 +198,15 @@ li a {
     margin-bottom: 1.5rem;
   }
   .learn__button {
-    padding-left: 1rem;
+    margin-left: 1rem;
+  }
+  .button-container {
+    display: inline;
+  }
+  .hero__container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    background-color: var(--color-hero-primary);
   }
 }
 
@@ -174,7 +215,7 @@ li a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    justify-items: center;
+    justify-items: end;
     gap: 5rem;
   }
   #first {
@@ -188,6 +229,12 @@ li a {
   }
   .hero__content p {
     font-size: 2rem;
+  }
+  .button-container {
+    display: inline;
+  }
+  .hero__buttons .button-container {
+    margin-left: 0;
   }
 }
 
@@ -205,6 +252,10 @@ li a {
   margin: 1rem 0 1rem;
   padding: 2.5rem;
   border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.feature__card:hover {
+  transform: scale(1.1);
 }
 .feature_card p {
   font-size: 1.5rem;
@@ -213,6 +264,7 @@ li a {
 
 .features__heading {
   font-size: 3rem;
+  margin-top: 5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -234,6 +286,7 @@ li a {
 
 .costomer__reviews {
   background-color: #d7f5f5;
+  padding-bottom: 5rem;
 }
 .card {
   margin: 2rem 1rem 2rem 1rem;
@@ -241,6 +294,7 @@ li a {
   background: white;
   border-radius: 5px;
   padding: 1.3rem;
+  transition: all 0.3s;
 }
 .card__header {
   display: flex;
@@ -248,9 +302,18 @@ li a {
   justify-content: space-between;
   align-items: flex-start;
 }
+.card:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 .user__info {
   display: flex;
 }
+.user__info img {
+  margin-top: 0;
+}
+
 .user__credintials {
   padding-top: 1rem;
   padding-left: 0.4rem;
@@ -283,6 +346,7 @@ li a {
   width: 15px;
 }
 .review__heading {
+  padding: 5rem 0 2rem;
   font-size: 3rem;
 }
 
@@ -291,6 +355,7 @@ li a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+    padding-bottom: 5rem;
   }
   .user__credintials {
     padding-top: 0;
@@ -318,11 +383,16 @@ li a {
   background-color: #fbf8f3;
   border-radius: 5px;
   padding: 2rem;
+  transition: all 0.3s;
+}
+.plan:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .plan__heading {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .plan__heading__p {
   text-align: center;
@@ -350,14 +420,17 @@ li a {
 .plan__content {
   border-top: 1px solid rgb(212, 212, 212);
   border-bottom: 1px solid rgb(212, 212, 212);
+  padding: 2rem 0 2rem;
 }
-.plan__content p,
+/*.plan__content p,
 img:first-of-type {
   margin-top: 1.4rem;
 }
+*/
 .plan__content img {
   width: 25px;
 }
+
 .plan__price {
   display: flex;
   flex-direction: row;
@@ -374,6 +447,13 @@ img:first-of-type {
 }
 .btn__mobile a {
   margin-bottom: 1rem;
+}
+.plans {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+.plan .button-container {
+  display: inline;
 }
 
 @media screen and (min-width: 480px) {
@@ -395,4 +475,50 @@ img:first-of-type {
   .btn__mobile {
     cursor: pointer;
   }
+}
+
+/*footer*/
+
+footer {
+  background: #d7f5f5;
+}
+.logo--footer h1 {
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+.policies {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.policies a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 1.5rem;
+}
+.policies img {
+  margin-top: 0;
+  margin: 1.5rem 1.5rem 1.5rem 0;
+}
+
+@media screen and (min-width: 480px) {
+  .policies {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .footer__elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .logo--footer {
+    padding-bottom: 1rem;
+    margin-bottom: 1.34rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
 }
